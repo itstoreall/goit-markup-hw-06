@@ -360,7 +360,7 @@
           </address>
         </div>
 
-        <div class="join-wrap">
+        <div class="join">
           <b class="subtitle">Присоединяйтесь</b>
           <ul class="join-set list">
             <li class="item">
@@ -393,8 +393,25 @@
             </li>
           </ul>
         </div>
+
+        <div class="mailing">
+          <b class="subtitle">Подпишитесь на рассылку</b>
+          <form class="mailing-form">
+            <label class="mailing-label"></label>
+            <input
+              type="email"
+              class="mailing-input"
+              name="mailing"
+              placeholder="E-mail"
+            />
+            <button class="mailing-submit">Подписаться</button>
+          </form>
+        </div>
       </div>
     </footer>
+
+    <!-- js для автовычесления высоты Header -->
+
     <script>
       const { height: pageHeaderHeight } = document
         .querySelector(".page-header")

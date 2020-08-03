@@ -424,7 +424,7 @@
           </address>
         </div>
 
-        <div class="join-wrap">
+        <div class="join">
           <b class="subtitle">Присоединяйтесь</b>
           <ul class="join-set list">
             <li class="item">
@@ -456,6 +456,20 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <div class="mailing">
+          <b class="subtitle">Подпишитесь на рассылку</b>
+          <form class="mailing-form">
+            <label class="mailing-label"></label>
+            <input
+              type="email"
+              class="mailing-input"
+              name="mailing"
+              placeholder="E-mail"
+            />
+            <button class="mailing-submit">Подписаться</button>
+          </form>
         </div>
       </div>
     </footer>
@@ -505,6 +519,7 @@
           <textarea
             type="textaria"
             class="form-textarea"
+            name="textaria"
             rows="5"
             placeholder="Комментарий"
           ></textarea>
@@ -534,26 +549,9 @@
       </div>
     </div>
 
-    <script>
-      const refs = {
-        openModalBtn: document.querySelector("[data-open-modal]"),
-        closeModalBtn: document.querySelector("[data-close-modal]"),
-        backdrop: document.querySelector("[data-backdrop]"),
-      };
+    <!-- js для модалки -->
 
-      refs.openModalBtn.addEventListener("click", toggleModal);
-      refs.closeModalBtn.addEventListener("click", toggleModal);
-
-      refs.backdrop.addEventListener("click", logBackdropClick);
-
-      function toggleModal() {
-        refs.backdrop.classList.toggle("is-hidden");
-      }
-
-      function logBackdropClick() {
-        console.log("Это клик в бекдроп");
-      }
-    </script>
+    <script src="./js/modal.js"></script>
 
     <!-- js для автовычесления высоты Header -->
 
